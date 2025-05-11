@@ -13,19 +13,19 @@ export default function SimpleStackingCards() {
 
   // Card 1 (bottom)
   const y1 = useTransform(scrollYProgress, [0.0, 0.3], [100, 0]);
-  const opacity1 = useTransform(scrollYProgress, [0.0, 0.3], [0, 1]);
+  const opacity1 = useTransform(scrollYProgress, [0.0, 0.3], [1, 1]);
   const rotate1 = useTransform(scrollYProgress, [0.3, 0.4], [0, -3]);
   const scale1 = useTransform(scrollYProgress, [0.3,0.4], [1, 0.95]);
 
   // Card 2 (middle)
   const y2 = useTransform(scrollYProgress, [0.1, 0.4], [1000, 0]);
-  const opacity2 = useTransform(scrollYProgress, [0.1, 0.4], [0, 1]);
+  const opacity2 = useTransform(scrollYProgress, [0.1, 0.4], [1, 1]);
   const rotate2 = useTransform(scrollYProgress, [0.4, 0.5], [0, -1.5]);
   const scale2 = useTransform(scrollYProgress, [0.4, 0.5], [1, 0.98]);
 
   // Card 3 (top)
   const y3 = useTransform(scrollYProgress, [0.2, 0.5], [2000, 0]);
-  const opacity3 = useTransform(scrollYProgress, [0.2, 0.5], [0, 1]);
+  const opacity3 = useTransform(scrollYProgress, [0.2, 0.5], [1, 1]);
   const rotate3 = useTransform(scrollYProgress, [0.5, 0.7], [0, -2]);
   const scale3 = useTransform(scrollYProgress, [0.5, 0.7], [1, 0.98]);
 
