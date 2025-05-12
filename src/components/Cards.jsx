@@ -3,6 +3,9 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { ReactComponent as Logo } from './file.svg';
 import { ReactComponent as Star } from './star.svg';
 import { ReactComponent as Heart } from './heard.svg';
+import { Canvas } from '@react-three/fiber'; // Import Canvas from @react-three/fiber
+import { OrbitControls } from '@react-three/drei'; // Import OrbitControls from @react-three/drei
+import { Model } from './Scene'; // Import the generated Model component
 
 export default function SimpleStackingCards() {
   const sectionRef = useRef(null);
@@ -55,8 +58,18 @@ export default function SimpleStackingCards() {
                 Side-step the tourist traps. We provide up-to-date information on the best hidden hotspots that'll make you feel like you're one of the locals.
               </span>
             </div>
-            <div className="w-full lg:w-1/2 mt-10 lg:mt-0">
-              Mobile Canvas
+            <div className="w-full h-full lg:w-1/2 mt-10 lg:mt-0">
+                <Canvas>
+                   {/* Lighting */}
+                   <ambientLight intensity={0.5} />
+                   <directionalLight position={[10, 10, 5]} intensity={1} />
+                   
+                   {/* Scale the model 10x */}
+                   <Model scale={[50, 50, 50]} />
+                   
+                   {/* Add OrbitControls for full interaction */}
+                   <OrbitControls enableZoom={false} enablePan={true} enableRotate={true} />
+                 </Canvas>
             </div>
           </motion.div>
 
@@ -83,8 +96,18 @@ export default function SimpleStackingCards() {
                 Side-step the tourist traps. We provide up-to-date information on the best hidden hotspots that'll make you feel like you're one of the locals.
               </span>
             </div>
-            <div className="w-full lg:w-1/2 mt-10 lg:mt-0">
-              Mobile Canvas
+            <div className="w-full h-full lg:w-1/2 mt-10 lg:mt-0">
+               <Canvas>
+                   {/* Lighting */}
+                   <ambientLight intensity={0.5} />
+                   <directionalLight position={[10, 10, 5]} intensity={1} />
+                   
+                   {/* Scale the model 10x */}
+                   <Model scale={[50, 50, 50]} />
+                   
+                   {/* Add OrbitControls for full interaction */}
+                   <OrbitControls enableZoom={false} enablePan={true} enableRotate={true} />
+                 </Canvas>
             </div>
           </motion.div>
 
@@ -111,8 +134,18 @@ export default function SimpleStackingCards() {
                 Side-step the tourist traps. We provide up-to-date information on the best hidden hotspots that'll make you feel like you're one of the locals.
               </span>
             </div>
-            <div className="w-full lg:w-1/2 mt-10 lg:mt-0">
-              Mobile Canvas
+            <div className="w-full h-full lg:w-1/2 mt-10 lg:mt-0">
+             <Canvas>
+                   {/* Lighting */}
+                   <ambientLight intensity={0.5} />
+                   <directionalLight position={[10, 10, 5]} intensity={1} />
+                   
+                   {/* Scale the model 10x */}
+                   <Model scale={[50, 50, 50]} />
+                   
+                   {/* Add OrbitControls for full interaction */}
+                  <OrbitControls enableZoom={false} enablePan={true} enableRotate={true} />
+                 </Canvas>
             </div>
           </motion.div>
 
