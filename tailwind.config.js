@@ -16,7 +16,11 @@ module.exports = {
         'sans-serif',
         'Apple Color Emoji',
         'Segoe UI Emoji',
-      ],}},
+      ],},
+       screens: {
+        ipad: { min: '768px', max: '1024px' }}
+    },
+      
   },
   plugins: [],
 }

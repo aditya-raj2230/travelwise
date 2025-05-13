@@ -9,6 +9,7 @@ function App() {
     <div className="App">
       <Extra/>
     <Cards/>
+    <Extra/>
     </div>
   );
 }

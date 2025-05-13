@@ -1,3 +1,13 @@
+/* Define custom font before Tailwind directives */
+@font-face {
+  font-family: 'Athletics';
+  src: url('./assests/fonts/Athletics-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Tailwind directives */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
